@@ -36,7 +36,11 @@ textarea {
     font-family: Arial;
     box-sizing: border-box;
 }
-button {
+li {
+    text-align: left;
+    list-style-image: url(Untitled.png);
+}
+.button {
     padding: 10px;
     font-size: 16px;
     background-color: #70a6cd;
@@ -46,11 +50,14 @@ button {
     cursor: pointer;
     color: white;
 }
-button:hover {
+.button:hover {
     background: linear-gradient(to top,#70a6cd 0,#3388c5 20%,#1d72b3 80%,#0d5997);
 }
 textarea[readonly] {
     background-color: #f9f9f9;
+}
+textarea:active {
+    background: linear-gradient(rgb(219, 234, 254), rgb(177, 210, 254));
 }
 h1 {
     background: rgba( 255, 255, 255, 0.25 );
@@ -62,6 +69,40 @@ h1 {
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
+}
+.engtonl {
+    background-image: url(nl.png);
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.nltobbr {
+    background-image: url(eng.png);
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+select {
+    background: linear-gradient(rgb(219, 234, 254), rgb(177, 210, 254));
+    color: rgb(15, 51, 116);
+    border: 1px ridge rgb(116, 158, 212);
 }
 @media only screen and (max-width: 683px) {
     body {
@@ -86,7 +127,7 @@ h1 {
     textarea {
         height: 80px; 
     }
-    button {
+    .button {
         padding: 10px;
         font-size: 14px;
     }

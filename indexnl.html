@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>English to Burenburgish Translator</title>
+    <title>Nederlands naar Burenburgs vertalen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="translator-container">
-        <button onclick="location.href='indexnl.html'" class="engtonl">
-            NL</button>
-        <h1> <i class="fa fa-language"></i> English to Burenburgish Translator </h1>
+        <button onclick="location.href='index.html'" class="nltobbr">
+            ENG</button>
+        <h1> <i class="fa fa-language"></i> Nederlands naar Burenburgs vertalen </h1>
         <div class="translator-box">
             <form id="selectForm">
                 <select id="pageSelect">
-                  <option value="#">Select langauge</option>
+                  <option value="#">Selecteer taal</option>
                   <option value="indexnl.html">NL -> BBR</option>
                   <option value="index.html">EN -> BBR</option>
                   <option value="bbrtoen.html">BBR -> EN</option>
                 </select><br><br>
                 <button type="button" onclick="goToPage()" class="button">Go</button>
               </form>
-            <textarea id="englishText" placeholder="Enter English text here"></textarea>
+            <textarea id="englishText" placeholder="Nederlands"></textarea>
             <button onclick="translateToBurenburgish()" class="button"><i class="fa fa-arrow-right"></i></button>
-            <textarea id="burenburgishText" placeholder="Burenburgish translation will appear here" readonly></textarea>
+            <textarea id="burenburgishText" placeholder="Burenburgs" readonly></textarea>
         </div><br>
         <div class="translator-box">
-            <a href="pronounce.html">Wanna learn how to pronounce words? Use this link.</a>
+            <a href="pronounce.html">Leren hoe je klanken moet uitspreken? Gebruik deze link (Engels)</a>
         </div>
     </div>
-    <script src="entobbr.js"></script>
+    <script src="nltobbr.js"></script>
     <script>
         function goToPage() {
             var select = document.getElementById("pageSelect");
