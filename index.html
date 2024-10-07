@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>English to Burenburgish Translator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="translator-container">
-        <button onclick="location.href='indexnl.html'" class="engtonl">
-            NL</button>
-        <h1> <i class="fa fa-language"></i> English to Burenburgish Translator </h1>
-        <div class="translator-box">
-            <div class="autobox">
-            <form id="selectForm">
-                <select id="pageSelect">
-                  <option value="#">Select langauge</option>
-                  <option value="indexnl.html">NL -> BBR</option>
-                  <option value="index.html">EN -> BBR</option>
-                  <option value="bbrtoen.html">BBR -> EN</option>
-                </select><br><br>
-                <button type="button" onclick="goToPage()" class="button">Go</button>
-              </form>
-            <textarea id="englishText" placeholder="Enter English text here"></textarea>
-            <button onclick="translateToBurenburgish()" class="button"><i class="fa fa-arrow-right"></i></button>
-            <textarea id="burenburgishText" placeholder="Burenburgish translation will appear here" readonly></textarea>
-            </div>
-        </div><br>
-        <div class="translator-box">
-            <a href="pronounce.html">Wanna learn how to pronounce words? Use this link.</a>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1><i class="fa fa-language"></i> English to Burenburgish Translator</h1>
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">X</span>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html" class="activelink">Home</a></li>
+                <li><a href="pronounce.html">Pronunciation Guide</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+            </ul>
         </div>
+        <div class="translator-box">
+                <form id="selectForm">
+                    <select id="pageSelect">
+                        <option value="#">Select language</option>
+                        <option value="indexnl.html">NL -> BBR</option>
+                        <option value="index.html">EN -> BBR</option>
+                        <option value="bbrtoen.html">BBR -> EN</option>
+                    </select><br><br>
+                    <button type="button" onclick="goToPage()" class="button">Go</button>
+                </form>
+                <textarea id="englishText" placeholder="Enter English text here"></textarea>
+                <button onclick="translateToBurenburgish()" class="button"><i class="fa fa-arrow-right"></i></button>
+                <textarea id="burenburgishText" placeholder="Burenburgish translation will appear here" readonly></textarea>
+                <button class="button" onclick="copyText()">Copy Text</button>
+        </div><br>
     </div>
     <script src="entobbr.js"></script>
     <script>
@@ -38,6 +43,27 @@
             var select = document.getElementById("pageSelect");
             var selectedValue = select.value;
             window.location.href = selectedValue;
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("show");
+        }
+        function copyText() {
+            const textarea = document.getElementById('burenburgishText');
+            
+            // Select the text in the textarea
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+
+            // Attempt to copy the text
+            navigator.clipboard.writeText(textarea.value)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    alert('Failed to copy text: ' + err);
+                });
         }
     </script>
 </body>

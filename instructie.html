@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Instructies</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="translator-container">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1><i class="fa fa-info"></i> Instructies</h1>
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">X</span>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Thuis</a></li>
+                <li><a href="pronounce.html">Uitspraak (Engels uitleg)</a></li>
+                <li><a href="instructions.html" class="activelink">Instructie</a></li>
+            </ul>
+        </div>
+        <div class="translator-box" style="text-align: left;">
+            <h2>Hoe gebruik je deze vertaler</h2>
+            <p>Deze vertaler zou niet moeilijk te gebruiken moeten zijn.</p>
+            <ul>
+                <li>Typ geen samentrekkingen (dus in plaats van roostermaker moet je rooster maker typen)</li>
+                <li>Bij het typen van meervoudsvormen moet je de zelfstandig naamwoord typen en dan "-en. Dus bijvoorbeeld "eet -en" wordt "nūtrit -ze".</li>
+            </ul>
+        </div><br>
+    </div>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

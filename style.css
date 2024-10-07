@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     background-image: linear-gradient(to bottom, skyblue, white);
@@ -60,36 +63,15 @@ textarea:active {
     background: linear-gradient(rgb(219, 234, 254), rgb(177, 210, 254));
 }
 h1 {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 #3388c5(120, 123, 169, 0.37);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(51, 136, 197, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-}
-.engtonl {
-    background-image: url(nl.png);
-    width: 25px;
-    height: 25px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.nltobbr {
-    background-image: url(eng.png);
-    width: 25px;
-    height: 25px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    overflow: hidden;
 }
 a {
     color: blue;
@@ -109,10 +91,7 @@ select {
     flex-direction: row;
     gap: 10px;
     min-width: 100%;
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 .other {
@@ -120,11 +99,57 @@ select {
     flex-direction: column;
     gap: 10px;
     min-width: 100%;
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+.hamburger {
+    cursor: pointer;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+.side-menu.show {
+    display: block;
+    transform: translateX(0);
+}
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+}
+.side-menu ul {
+    padding: 0;
+    margin: 20px 0;
+}
+.side-menu li {
+    margin: 10px 0;
+    list-style-image: none;
+    list-style-type: none;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.activelink {
+    color: black;
+}
+.activelink:hover {
+    color: black;
+    text-decoration: none;
 }
 @media only screen and (max-width: 683px) {
     body {
@@ -136,7 +161,7 @@ select {
     }
     .translator-box {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
         margin: 0;
         box-sizing: border-box;
         display: flex;
@@ -152,17 +177,6 @@ select {
     .button {
         padding: 10px;
         font-size: 14px;
-    }
-    .autobox {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        min-width: 100%;
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        box-sizing: border-box;
     }
     .otherbox {
         display: flex;

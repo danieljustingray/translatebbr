@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>English to Burenburgish Translator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="translator-container">
-        <h1>How does Burenburgish work?</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1><i class="fa fa-language"></i> English to Burenburgish Translator</h1>
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">X</span>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pronounce.html" class="activelink">Pronunciation Guide</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+            </ul>
+        </div>
         <div class="translator-box" style="padding: 3px !important">
             <div class="otherbox">
             <p>Pronounciation:</p>
@@ -22,10 +33,16 @@
                 <li>The &#8161; makes the same sound as the German ö, such as "Regard&#8161;r" being "Regarduur"</li>
             </ul><br><br>
             <img src="alphabettable.png" class="alphabettable">
-            <a href="index.html">Go back</a>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>

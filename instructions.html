@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Instructions</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="translator-container">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1><i class="fa fa-info"></i> Instructions</h1>
+        <div id="sideMenu" class="side-menu">
+            <span class="close-btn" onclick="toggleMenu()">X</span>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pronounce.html">Pronunciation Guide</a></li>
+                <li><a href="instructions.html" class="activelink">Instructions</a></li>
+            </ul>
+        </div>
+        <div class="translator-box" style="text-align: left;">
+            <h2>How to use this translator</h2>
+            <p>This translator has been made to be very easy to use.</p>
+            <ul>
+                <li>Do not type contractions (instead of say I'm say I am, saves me typing time)</li>
+                <li>When typing plural words, type "word -s". For example "Beds" becomes "Bed -s" and the outpout would be "lit -ze". Plural words in Burenburgish have a -ze as suffix.</li>
+            </ul>
+        </div><br>
+    </div>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

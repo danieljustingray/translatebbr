@@ -283,7 +283,9 @@ const dictionary = {
     "familie": "famili",
     "vriend": "frënd",
     "vrede": "vrëde",
-    "bij": "zu"
+    "bij": "zu",
+    "-en" : "-ze",
+    "-s" : "-ze"
 };
 // Function to translate English to Burenburgish
 function translateToBurenburgish() {
