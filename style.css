@@ -104,6 +104,28 @@ select {
     color: rgb(15, 51, 116);
     border: 1px ridge rgb(116, 158, 212);
 }
+.autobox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    min-width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.other {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
 @media only screen and (max-width: 683px) {
     body {
         display: flex;
@@ -130,5 +152,27 @@ select {
     .button {
         padding: 10px;
         font-size: 14px;
+    }
+    .autobox {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 100%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+    .otherbox {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 100%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
     }
 }
